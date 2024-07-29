@@ -329,11 +329,11 @@ span{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .services-container .services-box{
-    flex: 1 1 30rem;
+    flex: 1 1 34rem;
     background: var(--bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
