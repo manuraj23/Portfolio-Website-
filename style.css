@@ -482,8 +482,8 @@ span{
 }
 
 .certificate-slide img{
-    width: 44rem;
-    height: 32rem;
+    width: 39rem;
+    height: 28rem;
     object-fit: cover;
     border-radius: 5%;
     border: .5rem solid var(--bg-color);
@@ -544,7 +544,7 @@ span{
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--bg-color);
+    background: rgb(253, 253, 251);
     border-radius: .8rem;
     margin: .7rem 0;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
