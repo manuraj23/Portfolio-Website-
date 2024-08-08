@@ -13,14 +13,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images\OIP (1).jpg" type="image/x-icon">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "jXRXpGeIRWebQ407w",
-            });
-        })();
-    </script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> -->
 </head>
 
 <body>
@@ -47,9 +40,7 @@
         <div class="home-content">
             <h3>Hello,I am</h3>
             <h1>Manu Raj</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, numquam! Quaerat quis, animi, est delectus
-                maiores cum itaque quia, reiciendis fugiat voluptatem labore! Dolores, voluptas earum nemo eius adipisci
-                libero.</p>
+            <p>A passinate Web Developer and Java Develpoer.<br>Tech enthusiast.<br></p>
 
             <div class="social-media">
                 <a href="https://github.com/manuraj23" target="_blank"><i class="bx bxl-github"></i></a>
@@ -88,9 +79,9 @@
             <div class="overlay"></div>
         </div>
 
-        <div class="home-img">
+        <!-- <div class="home-img">
             <img src="images/home.png" alt="Image">
-        </div>
+        </div> -->
     </section>
     <section class="about" id="about">
         <div class="about-img">
@@ -100,10 +91,12 @@
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Hi, I'm Here to help you</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nulla quas, minima ratione vel quo.
-                Sequi esse qui exercitationem repellendus cupiditate blanditiis ipsa deleniti similique, iste nulla
-                velit, aliquam explicabo tempora reprehenderit autem illo, assumenda excepturi. Porro eos, fugit
-                accusantium consectetur deleniti minima, aliquam aperiam in ducimus laborum, perspiciatis temporibus?
+            <p>I am a Java, web, and C++ developer, as well as a data science and tech enthusiast with a strong
+                foundation in data structures and algorithms. I have demonstrated my mathematical prowess by clearing
+                the second stage of the Maths Olympiad in 2019 and the first level of the National Talent Search
+                Examination (NTSE) the same year. My programming skills are well recognized, having earned 5-star
+                ratings on HackerRank in both Python and SQL. Additionally, I am an avid chess player and a skilled
+                video editor, constantly honing my strategic thinking and problem-solving abilities.
             </p>
             <!-- <a href="#" class="btn">Readd More</a> -->
         </div>
@@ -171,10 +164,10 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="images\portfolio2.jpg" alt="image1">
+                <img src="images\WhatsApp Image 2024-07-12 at 2.29.46 AM.jpeg" alt="image1">
                 <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, numquam?</p>
+                    <h4>Sudoku Game</h4>
+                    <p>Develop a java Game with feature of login and signup,choose of difficulty level</p>
                     <a href="#"><i class="bx bx-link-external"></i></a>
                 </div>
             </div>
@@ -239,10 +232,11 @@
                     <div class="certificate-slide swiper-slide">
                         <img src="Certificate images\ChatGPT Advanced Data Analysis.jpeg" alt="image">
                         <h3>ChatGPT Advanced Data Analysis</h3>
-                        <p>Knowledgeable in ChatGPT Advanced Data Analysis, leveraging AI for advanced data insights.</p>
+                        <p>Knowledgeable in ChatGPT Advanced Data Analysis, leveraging AI for advanced data insights.
+                        </p>
                         <a href="ChatGPT Advanced Data Analysis.pdf" class="btn" target="_blank">View Certificate</a>
                     </div>
-                    
+
                 </div>
 
                 <div class="swiper-button-next"></div>
@@ -256,15 +250,21 @@
         <h2 class="heading">Contact <span>Me!</span></h2>
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Enter Your Name">
-                <input type="email" placeholder="Enter Your Mail">
+                <input type="text" placeholder="Enter Your Name" id="name" class="item" autocomplete="off">
+                <!-- <div class="error-txt">Name can't be blank</div> -->
+                <input type="email" placeholder="Enter Your Mail" id="email" class="item" autocomplete="off">
+                <!-- <div class="error-txt">Email Address can't be blank</div> -->
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Contact Number">
-                <input type="text" placeholder="Subject">
+                <input type="number" placeholder="Contact Number" id="phone" class="item" autocomplete="off">
+                <!-- <div class="error-txt">Contact number can't be blank</div> -->
+                <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                <!-- <div class="error-txt">Subject can't be blank</div> -->
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Massage"></textarea>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Massage" class="item"></textarea>
+            <!-- <div class="error-txt">Message can't be blank</div> -->
             <input type="submit" value="Send Message" class="btn">
+
         </form>
 
     </section>
