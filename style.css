@@ -162,11 +162,11 @@ section{
 
 .btn{
     display: inline-block;
-    padding: 1.2rem 2.8rem;
+    padding: 0.8rem 2rem;
     background: var(--main-color);
-    border-radius: .6rem;
+    border-radius: .5rem;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: var(--white-color);
     letter-spacing: .1rem;
     font-weight: 600;
