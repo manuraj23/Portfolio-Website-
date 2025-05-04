@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topic Page</title>
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #333;
+            --main-color: #754ef9;
+            --white-color: #fdfdfd;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        body {
+            background: url('images/web.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .container {
+            color: var(--text-color);
+            border-radius: 1rem;
+            max-width: 100%;
+            width: 100%;
+            height: 90%;
+            box-shadow: 0 8px 16px var(--shadow-color);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: left;
+            color: white;
+            margin: 0;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem 2rem;
+        }
+
+        .content p {
+            font-size: 1rem;
+            color: white;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .content p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Data Scientist</h1>
+        <div class="content">
+            <p>
+                I’m a results-driven Data Scientist with a strong foundation in statistical analysis, machine learning,
+                and data visualization. Proficient in Python and R, I work extensively with libraries like NumPy,
+                Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras, and XGBoost to extract insights, build
+                predictive models, and solve complex data problems. I leverage Excel and Tableau for interactive data
+                exploration and business reporting, and I use Streamlit to build and deploy data-driven web applications
+                with ease. Whether it’s data cleaning, feature engineering, model tuning, or deploying ML pipelines, I
+                bring a holistic and practical approach to every project. My goal is to turn raw data into actionable
+                intelligence that drives business growth and informed decision-making.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
