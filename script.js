@@ -107,4 +107,33 @@ sr.reveal('.about-content', {
   origin: 'right'
 });
 
+// Get all buttons and the pop-up elements
+const buttons = document.querySelectorAll('.btn[data-target]');
+const popup = document.getElementById('popup');
+const iframe = document.getElementById('popup-iframe');
+const closeButton = document.querySelector('.popup .close');
+
+// Open pop-up and load the target page in the iframe
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = button.getAttribute('data-target');
+        iframe.src = target; // Load the target page in the iframe
+        popup.style.display = 'flex'; // Show the pop-up
+    });
+});
+
+// Close the pop-up
+closeButton.addEventListener('click', () => {
+    popup.style.display = 'none';
+    iframe.src = ''; // Clear the iframe content
+});
+
+// Close the pop-up when clicking outside the content
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+        popup.style.display = 'none';
+        iframe.src = ''; // Clear the iframe content
+    }
+});
   

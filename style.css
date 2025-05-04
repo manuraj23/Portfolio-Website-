@@ -360,7 +360,7 @@ span{
 }
 
 .services-box i{
-    font-size: 7rem;
+    font-size: 6rem;
     color: var(--main-color);
 }
 
@@ -377,6 +377,58 @@ span{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
+
+/* Pop-up styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 800px;
+    height: 80%;
+    position: relative;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem; /* Increase font size */
+    cursor: pointer;
+    color: #ff0000; /* Bright red color for visibility */
+    font-weight: bold;
+    background: #fff; /* Add a white background */
+    border-radius: 50%; /* Make it circular */
+    padding: 0.5rem; /* Add padding for better click area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.popup-content .close:hover {
+    background: #ff0000; /* Change background to red on hover */
+    color: #fff; /* Change text color to white on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.popup-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 
 .portfolio{
     padding-bottom: 10rem;
