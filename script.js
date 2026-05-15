@@ -108,33 +108,85 @@ sr.reveal('.about-content', {
   origin: 'right'
 });
 
-// Get all buttons and the pop-up elements
-const buttons = document.querySelectorAll('.btn[data-target]');
-const popup = document.getElementById('popup');
-const iframe = document.getElementById('popup-iframe');
-const closeButton = document.querySelector('.popup .close');
+// Service details popup
+const serviceButtons = document.querySelectorAll('.service-btn');
+const servicePopup = document.getElementById('service-popup');
+const servicePopupBody = document.getElementById('service-popup-body');
+const serviceClose = servicePopup ? servicePopup.querySelector('.experience-popup-close') : null;
 
-// Open pop-up and load the target page in the iframe
-buttons.forEach(button => {
+const closeServicePopup = () => {
+    if (!servicePopup) return;
+    servicePopup.classList.remove('open');
+    if (servicePopupBody) {
+        servicePopupBody.innerHTML = '';
+    }
+    document.body.style.overflow = '';
+};
+
+serviceButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = button.getAttribute('data-target');
-        iframe.src = target; // Load the target page in the iframe
-        popup.style.display = 'flex'; // Show the pop-up
+        if (!servicePopup || !servicePopupBody) return;
+        const targetId = button.getAttribute('data-service');
+        const template = document.getElementById(targetId);
+        if (!template) return;
+        servicePopupBody.innerHTML = '';
+        servicePopupBody.appendChild(template.content.cloneNode(true));
+        servicePopup.classList.add('open');
+        document.body.style.overflow = 'hidden';
     });
 });
 
-// Close the pop-up
-closeButton.addEventListener('click', () => {
-    popup.style.display = 'none';
-    iframe.src = ''; // Clear the iframe content
+if (serviceClose) {
+    serviceClose.addEventListener('click', closeServicePopup);
+}
+
+if (servicePopup) {
+    servicePopup.addEventListener('click', (e) => {
+        if (e.target === servicePopup) {
+            closeServicePopup();
+        }
+    });
+}
+
+// Experience details popup
+const expButtons = document.querySelectorAll('.experience-btn');
+const expPopup = document.getElementById('experience-popup');
+const expPopupBody = expPopup ? expPopup.querySelector('.experience-popup-body') : null;
+const expClose = expPopup ? expPopup.querySelector('.experience-popup-close') : null;
+
+const closeExperiencePopup = () => {
+    if (!expPopup) return;
+    expPopup.classList.remove('open');
+    if (expPopupBody) {
+        expPopupBody.innerHTML = '';
+    }
+    document.body.style.overflow = '';
+};
+
+expButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!expPopup || !expPopupBody) return;
+        const targetId = button.getAttribute('data-exp');
+        const template = document.getElementById(targetId);
+        if (!template) return;
+        expPopupBody.innerHTML = '';
+        expPopupBody.appendChild(template.content.cloneNode(true));
+        expPopup.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
 });
 
-// Close the pop-up when clicking outside the content
-popup.addEventListener('click', (e) => {
-    if (e.target === popup) {
-        popup.style.display = 'none';
-        iframe.src = ''; // Clear the iframe content
-    }
-});
+if (expClose) {
+    expClose.addEventListener('click', closeExperiencePopup);
+}
+
+if (expPopup) {
+    expPopup.addEventListener('click', (e) => {
+        if (e.target === expPopup) {
+            closeExperiencePopup();
+        }
+    });
+}
   

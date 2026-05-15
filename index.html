@@ -77,15 +77,17 @@
                     <i class="bx bx-cloud"></i>
                 </div>
                 <div class="experience-header">
-                    <h3>Cloud & DevOps Intern</h3>
-                    <span class="experience-time">Jan 2024 - Jun 2024</span>
+                    <h3>Java Developer Intern</h3>
+                    <span class="experience-company">Argusoft India Ltd</span>
+                    <span class="experience-time">Jan 2026 - May 2026</span>
                 </div>
-                <p>Automated CI/CD workflows, introduced infrastructure-as-code, and improved release reliability across microservices.</p>
+                <p>Built an AI-powered form builder and analytics platform with Spring Boot, Angular, and PostgreSQL.</p>
                 <div class="experience-tags">
-                    <span>AWS</span>
-                    <span>Docker</span>
-                    <span>GitHub Actions</span>
+                    <span>Spring Boot</span>
+                    <span>Angular</span>
+                    <span>PostgreSQL</span>
                 </div>
+                <a href="#" class="btn experience-btn" data-exp="exp-argusoft">View Details</a>
             </div>
 
             <div class="experience-card">
@@ -93,15 +95,17 @@
                     <i class="bx bx-code-alt"></i>
                 </div>
                 <div class="experience-header">
-                    <h3>Backend Engineering Lead</h3>
-                    <span class="experience-time">Aug 2023 - Dec 2023</span>
+                    <h3>Software Development Engineer Intern</h3>
+                    <span class="experience-company">BlueStock</span>
+                    <span class="experience-time">Nov 2025 - Dec 2025</span>
                 </div>
-                <p>Designed scalable APIs, integrated Redis caching, and built observability dashboards for performance tuning.</p>
+                <p>Delivered secure company onboarding APIs with Redis caching and JWT authentication.</p>
                 <div class="experience-tags">
                     <span>Spring Boot</span>
                     <span>Redis</span>
-                    <span>Grafana</span>
+                    <span>JWT</span>
                 </div>
+                <a href="#" class="btn experience-btn" data-exp="exp-bluestock">View Details</a>
             </div>
 
             <div class="experience-card">
@@ -109,18 +113,63 @@
                     <i class="bx bx-data"></i>
                 </div>
                 <div class="experience-header">
-                    <h3>Data Platform Builder</h3>
-                    <span class="experience-time">Feb 2023 - Jul 2023</span>
+                    <h3>AI/ML Intern</h3>
+                    <span class="experience-company">Outlier AI</span>
+                    <span class="experience-time">Oct 2024 - Apr 2025</span>
                 </div>
-                <p>Delivered analytics pipelines, optimized ETL workflows, and enabled faster reporting for product teams.</p>
+                <p>Improved AI-driven data analysis workflows and optimized ML models for scalability.</p>
                 <div class="experience-tags">
-                    <span>Python</span>
-                    <span>PostgreSQL</span>
-                    <span>Airflow</span>
+                    <span>AI</span>
+                    <span>Prompt Engineering</span>
+                    <span>LLM Refining</span>
                 </div>
+                <a href="#" class="btn experience-btn" data-exp="exp-outlier">View Details</a>
             </div>
         </div>
     </section>
+    <div class="experience-popup" id="experience-popup">
+        <div class="experience-popup-content">
+            <button class="experience-popup-close" type="button" aria-label="Close experience details">&times;</button>
+            <div class="experience-popup-body"></div>
+        </div>
+    </div>
+
+    <template id="exp-argusoft">
+        <div class="experience-detail">
+            <h3>Java Developer Intern</h3>
+            <p class="experience-detail-meta">Argusoft India Ltd - Gandhinagar, Gujarat | Internship | Jan 2026 to May 2026</p>
+            <ul class="experience-detail-list">
+                <li>Built a scalable AI-powered form builder and analytics platform with drag-and-drop creation, RBAC, versioning, and conditional logic, supporting 1K+ concurrent users and reducing data collection effort by ~70%.</li>
+                <li>Developed an agentic AI chatbot with Spring AI to generate forms from natural language using prompt templating, chat memory, and a RAG pipeline.</li>
+                <li>Architected a secure containerized backend with Docker and AWS EC2/S3, JWT, OAuth, OTP authentication, multi-user sessions, and CI/CD via GitHub Actions, achieving 99.9% uptime and reducing deployment effort by ~60%.</li>
+                <li>Optimized PostgreSQL performance with JSONB, indexing, and RBAC-based access control, improving data processing efficiency by ~60%.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="exp-bluestock">
+        <div class="experience-detail">
+            <h3>Software Development Engineer Intern</h3>
+            <p class="experience-detail-meta">BlueStock - Remote | Internship | Nov 2025 to Dec 2025</p>
+            <ul class="experience-detail-list">
+                <li>Built the company registration and verification module with 10+ RESTful APIs in Spring Boot for secure onboarding, authentication, and profile management.</li>
+                <li>Implemented JWT authentication, input validation, and Redis caching, reducing unauthorized access risks by 90% and improving API response time by 30%.</li>
+                <li>Containerized 3+ backend services using Docker and automated CI/CD with GitHub Actions, reducing manual deployment effort by 60% and validating 20+ API test cases via Postman.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="exp-outlier">
+        <div class="experience-detail">
+            <h3>AI/ML Intern</h3>
+            <p class="experience-detail-meta">Outlier AI - Remote | Part-time | Oct 2024 to Apr 2025</p>
+            <ul class="experience-detail-list">
+                <li>Developed AI-driven data analysis models, improving prediction accuracy and problem-solving efficiency.</li>
+                <li>Optimized machine learning models for better performance and scalability.</li>
+                <li>Technologies: AI, prompt engineering, LLM refining.</li>
+            </ul>
+        </div>
+    </template>
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Latest <span>Projects</span></h2>
         <p class="experience-intro">Selected builds that showcase backend depth, clean UX, and production-ready delivery.</p>
@@ -204,14 +253,14 @@
                 <h3>Web Development</h3>
                 <p>Design and develop responsive and dynamic websites using modern web technologies like MERN,
                     Springboot, HTML, CSS, JavaScript, and frameworks..</p>
-                <a href="#" class="btn" data-target="web.html">Read More</a>
+                <a href="#" class="btn service-btn" data-service="service-web">Read More</a>
             </div>
             <div class="services-box">
                 <i class='bx bxl-android'></i>
                 <h3>Android Development</h3>
                 <p>Create user-friendly and feature-rich Android applications tailored to meet client requirements and
                     industry standards.</p>
-                <a href="#" class="btn" data-target="android.html">Read More</a>
+                <a href="#" class="btn service-btn" data-service="service-android">Read More</a>
             </div>
             <div class="services-box">
                 <i class='bx bxl-microsoft'></i>
@@ -219,38 +268,109 @@
                 <p>Develop robust and scalable software solutions for various platforms like windows, linux, ensuring
                     high performance, security and
                     reliability.</p>
-                <a href="#" class="btn" data-target="software.html">Read More</a>
+                <a href="#" class="btn service-btn" data-service="service-software">Read More</a>
             </div>
             <div class="services-box">
                 <i class='bx bxs-data'></i>
                 <h3>Data Scientist</h3>
                 <p>Analyze and interpret complex data to provide actionable insights and drive data-driven
                     decision-making.</p>
-                <a href="#" class="btn" data-target="data.html">Read More</a>
+                <a href="#" class="btn service-btn" data-service="service-data">Read More</a>
             </div>
             <div class="services-box">
                 <i class='bx bx-chat'></i>
                 <h3>AI/ML chatbots</h3>
                 <p>Design and implement intelligent chatbots using AI and ML to enhance customer
                     interaction and support.</p>
-                <a href="#" class="btn" data-target="ai.html">Read More</a>
+                <a href="#" class="btn service-btn" data-service="service-ai">Read More</a>
             </div>
             <div class="services-box">
                 <i class='bx bxs-video-recording'></i>
                 <h3>Video Editor</h3>
                 <p>Produce and edit high-quality videos with creative storytelling and professional-grade tools.</p>
-                <a href="#" class="btn" data-target="video.html">Read More</a>
+                <a href="#" class="btn service-btn" data-service="service-video">Read More</a>
             </div>
 
         </div>
-        <!-- Pop-up -->
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                <iframe id="popup-iframe" src="" frameborder="0"></iframe>
-            </div>
-        </div>
     </section>
+    <div class="experience-popup" id="service-popup">
+        <div class="experience-popup-content">
+            <button class="experience-popup-close" type="button" aria-label="Close service details">&times;</button>
+            <div class="experience-popup-body" id="service-popup-body"></div>
+        </div>
+    </div>
+
+    <template id="service-web">
+        <div class="experience-detail">
+            <h3>Web Development</h3>
+            <p class="experience-detail-meta">Service Overview</p>
+            <ul class="experience-detail-list">
+                <li>Responsive and dynamic websites tailored to your brand.</li>
+                <li>Stack coverage across MERN, Spring Boot, HTML, CSS, and JavaScript.</li>
+                <li>Modern UI frameworks with production-ready deployments.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="service-android">
+        <div class="experience-detail">
+            <h3>Android Development</h3>
+            <p class="experience-detail-meta">Service Overview</p>
+            <ul class="experience-detail-list">
+                <li>User-friendly Android apps aligned with client requirements.</li>
+                <li>Feature-rich builds that meet industry standards.</li>
+                <li>Quality-focused delivery for smooth mobile experiences.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="service-software">
+        <div class="experience-detail">
+            <h3>Software Development</h3>
+            <p class="experience-detail-meta">Service Overview</p>
+            <ul class="experience-detail-list">
+                <li>Robust, scalable software solutions for Windows and Linux.</li>
+                <li>Performance, security, and reliability built in from day one.</li>
+                <li>Clean architecture for maintainable, long-term systems.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="service-data">
+        <div class="experience-detail">
+            <h3>Data Scientist</h3>
+            <p class="experience-detail-meta">Service Overview</p>
+            <ul class="experience-detail-list">
+                <li>Analyze complex data to reveal actionable insights.</li>
+                <li>Decision-ready dashboards and data storytelling.</li>
+                <li>Data-driven strategies to improve outcomes.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="service-ai">
+        <div class="experience-detail">
+            <h3>AI/ML Chatbots</h3>
+            <p class="experience-detail-meta">Service Overview</p>
+            <ul class="experience-detail-list">
+                <li>Intelligent chatbots using AI and ML for customer support.</li>
+                <li>Automation that improves response speed and engagement.</li>
+                <li>Conversational flows tailored to business goals.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="service-video">
+        <div class="experience-detail">
+            <h3>Video Editor</h3>
+            <p class="experience-detail-meta">Service Overview</p>
+            <ul class="experience-detail-list">
+                <li>High-quality edits with creative storytelling.</li>
+                <li>Professional-grade tools for polished output.</li>
+                <li>Brand-aligned visuals for strong audience impact.</li>
+            </ul>
+        </div>
+    </template>
 
     <section class="certificate-container" id="certificates">
         <h2 class="heading">Valuable <span>Certificates</span></h2>

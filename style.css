@@ -450,17 +450,27 @@ span{
     display: flex;
     flex-direction: column;
     height: 100%;
-    background: linear-gradient(160deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .02));
-    padding: 3rem 2.4rem 3.4rem;
-    border-radius: 2rem;
-    box-shadow: 0 .8rem 1.8rem var(--shadow-color);
-    text-align: center;
-    border: .1rem solid rgba(14, 165, 233, .12);
-    border-top: .5rem solid var(--main-color);
+    background: linear-gradient(150deg, rgba(14, 165, 233, .1), rgba(255, 255, 255, .02));
+    padding: 3.2rem 2.6rem 3rem;
+    border-radius: 2.2rem;
+    box-shadow: 0 .9rem 2rem rgba(15, 23, 42, .16);
+    text-align: left;
+    border: .1rem solid rgba(14, 165, 233, .18);
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(2px);
     transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.services-container .services-box::before{
+    content: '';
+    position: absolute;
+    top: 2.4rem;
+    left: 0;
+    width: .45rem;
+    height: calc(100% - 4.8rem);
+    background: linear-gradient(180deg, rgba(14, 165, 233, .95), rgba(14, 165, 233, .2));
+    border-radius: 0 1rem 1rem 0;
 }
 
 .services-container .services-box:hover{
@@ -473,14 +483,14 @@ span{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 7rem;
-    height: 7rem;
-    margin: 0 auto 1.6rem;
-    font-size: 3.6rem;
+    width: 5.4rem;
+    height: 5.4rem;
+    margin: 0 0 2rem;
+    font-size: 2.6rem;
     color: var(--main-color);
-    border-radius: 50%;
-    background: rgba(14, 165, 233, .08);
-    box-shadow: 0 .6rem 1.4rem rgba(14, 165, 233, .12);
+    border-radius: 1.4rem;
+    background: rgba(14, 165, 233, .16);
+    box-shadow: inset 0 0 0 .1rem rgba(14, 165, 233, .35);
     transform-origin: center;
     transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
 }
@@ -502,7 +512,7 @@ span{
 
 .services-box p{
     font-size: 1.7rem;
-    margin: 1.2rem 0 2.6rem;
+    margin: 1.2rem 0 2rem;
     color: var(--text-color);
     opacity: .92;
     line-height: 1.7;
@@ -599,6 +609,7 @@ span{
 .experience-header h3{
     font-size: 2.2rem;
     line-height: 1.2;
+    color: var(--main-color);
 }
 
 .experience-time{
@@ -606,7 +617,15 @@ span{
     letter-spacing: .06em;
     text-transform: uppercase;
     color: var(--text-color);
-    opacity: .7;
+    opacity: .6;
+}
+
+.experience-company{
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: var(--text-color);
+    opacity: .9;
 }
 
 .experience-card p{
@@ -633,6 +652,19 @@ span{
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: .02em;
+}
+
+.experience-card .btn{
+    align-self: flex-start;
+    margin-top: 2.2rem;
+    border-radius: 999px;
+    padding: .9rem 2.2rem;
+    box-shadow: 0 .6rem 1.4rem rgba(14, 165, 233, .18);
+}
+
+.experience-card .btn:hover{
+    transform: translateY(-.2rem);
+    box-shadow: 0 .8rem 1.6rem rgba(14, 165, 233, .24);
 }
 
 /* Pop-up styles */
@@ -684,6 +716,94 @@ span{
     width: 100%;
     height: 100%;
     border: none;
+}
+
+.experience-popup{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    padding: 2rem;
+}
+
+.experience-popup.open{
+    display: flex;
+}
+
+.experience-popup-content{
+    position: relative;
+    background-color: var(--bg-color);
+    background-image:
+        radial-gradient(circle at 18% 18%, rgba(14, 165, 233, .14), transparent 42%),
+        radial-gradient(circle at 86% 72%, rgba(14, 165, 233, .08), transparent 45%);
+    color: var(--text-color);
+    width: min(92rem, 100%);
+    max-height: 85vh;
+    border-radius: 2rem;
+    padding: 3rem 3rem 3.4rem;
+    box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.35);
+    overflow: auto;
+}
+
+.experience-popup-close{
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2.4rem;
+    background: rgba(14, 165, 233, 0.12);
+    color: var(--main-color);
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.experience-popup-close:hover{
+    transform: scale(1.08);
+    background: rgba(14, 165, 233, 0.2);
+}
+
+.experience-detail h3{
+    font-size: 2.6rem;
+    margin-bottom: .6rem;
+}
+
+.experience-detail-meta{
+    font-size: 1.4rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    opacity: .7;
+    margin-bottom: 2rem;
+}
+
+.experience-detail-list{
+    list-style: none;
+    display: grid;
+    gap: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    padding-left: 0;
+}
+
+.experience-detail-list li{
+    position: relative;
+    padding-left: 2.2rem;
+}
+
+.experience-detail-list li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: .7rem;
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    background: var(--main-color);
+    box-shadow: 0 0 0 .35rem rgba(14, 165, 233, .18);
 }
 
 
@@ -805,6 +925,8 @@ span{
     flex-direction: column;
     width: 100%;
     padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .certificate-container .certificate-wrapper{
@@ -824,12 +946,14 @@ span{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: var(--bg-color);
+    background: linear-gradient(160deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .02));
     border-radius: 2rem;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
     padding: 3rem 5rem;
-    border-top: .8rem solid var(--main-color);
-    border-bottom: .8rem solid var(--main-color);
+    border: .1rem solid rgba(14, 165, 233, .2);
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
+    backdrop-filter: blur(2px);
 }
 
 .certificate-slide img{
@@ -850,6 +974,17 @@ span{
     font-size: 1.4rem;
     text-align: center;
     margin: 1rem 0;
+}
+
+.certificate-slide .btn{
+    border-radius: 999px;
+    padding: .9rem 2.2rem;
+    box-shadow: 0 .6rem 1.4rem rgba(14, 165, 233, .18);
+}
+
+.certificate-slide .btn:hover{
+    transform: translateY(-.2rem);
+    box-shadow: 0 .8rem 1.6rem rgba(14, 165, 233, .24);
 }
 .certificate-box .swiper-button-next,
 .certificate-box .swiper-button-prev{
