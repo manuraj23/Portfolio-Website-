@@ -106,6 +106,12 @@ body {
     font-size: 2.4rem;
     color: var(--text-color);
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
 }
 
 .header.sticky #darkMode-icon{
@@ -117,6 +123,11 @@ body {
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
 }
 
 section{
@@ -667,6 +678,136 @@ span{
     box-shadow: 0 .8rem 1.6rem rgba(14, 165, 233, .24);
 }
 
+.education{
+    min-height: auto;
+    padding-bottom: 8rem;
+    position: relative;
+}
+
+.education h2{
+    margin-bottom: 2rem;
+}
+
+.education-intro{
+    max-width: 70rem;
+    margin: 0 auto 4rem;
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    opacity: .9;
+}
+
+.education-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.6rem;
+}
+
+.education-card{
+    position: relative;
+    padding: 3.2rem 2.6rem 3rem;
+    border-radius: 2.2rem;
+    background: linear-gradient(150deg, rgba(14, 165, 233, .1), rgba(255, 255, 255, .02));
+    border: .1rem solid rgba(14, 165, 233, .18);
+    box-shadow: 0 .9rem 2rem rgba(15, 23, 42, .16);
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.education-card::before{
+    content: '';
+    position: absolute;
+    top: 2.4rem;
+    left: 0;
+    width: .45rem;
+    height: calc(100% - 4.8rem);
+    background: linear-gradient(180deg, rgba(14, 165, 233, .95), rgba(14, 165, 233, .2));
+    border-radius: 0 1rem 1rem 0;
+}
+
+.education-card:hover{
+    transform: translateY(-.6rem);
+    border-color: rgba(14, 165, 233, .35);
+    box-shadow: 0 1.3rem 2.6rem rgba(14, 165, 233, .2);
+}
+
+.education-badge{
+    width: 5.4rem;
+    height: 5.4rem;
+    border-radius: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(14, 165, 233, .16);
+    color: var(--main-color);
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    box-shadow: inset 0 0 0 .1rem rgba(14, 165, 233, .35);
+}
+
+.education-header{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin-bottom: 1.6rem;
+}
+
+.education-header h3{
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: var(--main-color);
+}
+
+.education-degree{
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: var(--text-color);
+    opacity: .9;
+}
+
+.education-score{
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: var(--text-color);
+    opacity: .9;
+}
+
+.education-time{
+    font-size: 1.35rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text-color);
+    opacity: .6;
+}
+
+.education-card p{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.education-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.education-tags span{
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    background: rgba(14, 165, 233, .12);
+    border: .1rem solid rgba(14, 165, 233, .3);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+
 /* Pop-up styles */
 .popup {
     display: none;
@@ -933,7 +1074,7 @@ span{
     position: relative;
     max-width: 90rem;
     width: 100%;
-    padding: 5rem;
+    padding: clamp(2rem, 4vw, 5rem);
 }
 
 .certificate-wrapper .certificate-box{
@@ -949,7 +1090,7 @@ span{
     background: linear-gradient(160deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .02));
     border-radius: 2rem;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
-    padding: 3rem 5rem;
+    padding: clamp(2rem, 4vw, 3rem) clamp(2rem, 5vw, 5rem);
     border: .1rem solid rgba(14, 165, 233, .2);
     border-top: .6rem solid var(--main-color);
     border-bottom: .6rem solid var(--main-color);
@@ -957,9 +1098,10 @@ span{
 }
 
 .certificate-slide img{
-    width: 39rem;
-    height: 28rem;
-    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     border-radius: 5%;
     border: .5rem solid var(--bg-color);
     outline: .5rem solid var(--main-color);
@@ -1124,14 +1266,19 @@ span{
 }
 
 @media (max-width:991px){
+    .header{
+        padding-right: 12rem;
+    }
 
     #menu-icon{
-        display: block;
+        display: inline-flex;
         position: absolute;
         top: 50%;
         right: 2rem;
         transform: translateY(-50%);
         z-index: 101;
+        background: rgba(14, 165, 233, .12);
+        border: .1rem solid rgba(14, 165, 233, .35);
     }
 
     #darkMode-icon{
@@ -1142,6 +1289,8 @@ span{
         font-size: 2.6rem;
         color: var(--text-color);
         z-index: 101;
+        background: rgba(14, 165, 233, .12);
+        border: .1rem solid rgba(14, 165, 233, .35);
     }
 
     .navbar{
@@ -1154,6 +1303,8 @@ span{
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
         display: none;
+        max-height: calc(100vh - 8rem);
+        overflow-y: auto;
     }
 
     .navbar.active{
@@ -1202,6 +1353,10 @@ span{
     }
 
     .experience-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .education-grid{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -1363,6 +1518,10 @@ span{
     }
 
     .experience-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .education-grid{
         grid-template-columns: 1fr;
     }
 
