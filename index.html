@@ -176,7 +176,7 @@
         <p class="experience-intro">Selected builds that showcase backend depth, clean UX, and production-ready delivery.</p>
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="images\Journal-App1.png" alt="image1">
+                <img src="images\Journal-App.png" alt="image1">
                 <div class="portfolio-layer">
                     <h4>Journal App</h4>
                     <p>Complete backend application to manage daily Journal, With redis, kafka, sonarCloud, cron
@@ -198,7 +198,7 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="images\Olympic-Data4.png" alt="image1">
+                <img src="images\Olympic.png" alt="image1">
                 <div class="portfolio-layer">
                     <h4>Olympic Data Analysis</h4>
                     <p>A comprehensice web app for deep insights for olympic data analysis.</p>
@@ -218,7 +218,7 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="images\todo.png" alt="image1">
+                <img src="images\TODO.png" alt="image1">
                 <div class="portfolio-layer">
                     <h4>To-Do App</h4>
                     <p>Created a cross platform to-do app with real time sync with firestore and for both mobile and web
@@ -231,7 +231,7 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="images\Sudoku Image2.png" alt="image1">
+                <img src="images\Soduku.png" alt="image1">
                 <div class="portfolio-layer">
                     <h4>Sudoku Game</h4>
                     <p>Develop a java Game with feature of login and signup,choose of difficulty level</p>
@@ -459,7 +459,7 @@
     </section>
     <section class="about" id="about">
         <div class="about-img">
-            <img src="images\about.png" alt="Image">
+            <img src="images\Photo1.png" alt="Image">
         </div>
 
         <div class="about-content">
@@ -483,27 +483,38 @@
     <!-- contact section -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="#">
+        <form action="#" id="contact-form">
             <div class="input-box">
-                <input type="text" placeholder="Enter Your Name" id="name" class="item" autocomplete="off">
+                <input type="text" placeholder="Enter Your Name" id="name" name="name" class="item" autocomplete="off" required>
                 <!-- <div class="error-txt">Name can't be blank</div> -->
-                <input type="email" placeholder="Enter Your Mail" id="email" class="item" autocomplete="off">
+                <input type="email" placeholder="Enter Your Mail" id="email" name="email" class="item" autocomplete="off" required>
                 <!-- <div class="error-txt">Email Address can't be blank</div> -->
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Contact Number" id="phone" class="item" autocomplete="off">
+                <input type="tel" placeholder="Contact Number" id="phone" name="phone" class="item" autocomplete="off">
                 <!-- <div class="error-txt">Contact number can't be blank</div> -->
-                <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                <input type="text" placeholder="Subject" id="subject" name="subject" class="item" autocomplete="off" required>
                 <!-- <div class="error-txt">Subject can't be blank</div> -->
             </div>
-            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Massage" class="item"></textarea>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Massage" class="item" required></textarea>
             <!-- <div class="error-txt">Message can't be blank</div> -->
-            <input type="submit" value="Send Message" class="btn" onclick="alert('Email service is under development. Connect through my Linkedin.');">
+            <button type="submit" class="btn contact-btn">Send Message</button>
             
 
         </form>
 
     </section>
+    <div class="experience-popup" id="contact-popup">
+        <div class="experience-popup-content">
+            <button class="experience-popup-close" type="button" aria-label="Close contact message">&times;</button>
+            <div class="experience-detail">
+                <h3>Internal Server Error</h3>
+                <p class="experience-detail-meta">Message not sent</p>
+                <p>Connect through LinkedIn for now.</p>
+                <a href="https://www.linkedin.com/in/manu-raj-dev/" class="btn" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            </div>
+        </div>
+    </div>
     <!-- footer Design -->
     <footer class="footer">
         <div class="footer-text">

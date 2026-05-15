@@ -1,4 +1,32 @@
 // ==========send email=====
+const contactForm = document.querySelector('#contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        if (!contactForm.checkValidity()) {
+            return;
+        }
+
+        event.preventDefault();
+
+        const name = document.querySelector('#name')?.value.trim();
+        const email = document.querySelector('#email')?.value.trim();
+        const phone = document.querySelector('#phone')?.value.trim();
+        const subject = document.querySelector('#subject')?.value.trim();
+        const message = document.querySelector('#message')?.value.trim();
+
+        const bodyLines = [
+            `Name: ${name}`,
+            `Email: ${email}`,
+            phone ? `Phone: ${phone}` : null,
+            '',
+            message
+        ].filter(Boolean);
+
+        const mailto = `mailto:manuraj082004@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+        window.location.href = mailto;
+        contactForm.reset();
+    });
+}
 
 
 //========================= menuicon navbar=============
