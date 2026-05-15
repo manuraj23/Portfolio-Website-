@@ -20,24 +20,21 @@
 
 
 <body class="dark-mode">
-
-
-
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
             <a href="#portfolio">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
         <div class="bx bx-sun" id="darkMode-icon"></div>
 
         <div class="bx bx-menu" id="menu-icon"></div>
-
-
     </header>
     <section class="home" id="home">
         <div class="home-content">
@@ -70,89 +67,63 @@
             <img src="images/about1.png" alt="Image">
         </div> -->
     </section>
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="images\about1.png" alt="Image">
-        </div>
+    <section class="experience" id="experience">
+        <h2 class="heading">My <span>Experience</span></h2>
+        <p class="experience-intro">A snapshot of the roles and projects where I focused on reliability, automation, and backend scalability.</p>
 
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Hi, I'm Here to help you</h3>
-            <p>I'm Manu Raj, a passionate and results-driven Computer Science undergraduate at Lovely Professional
-                University. With strong foundations in data structures, algorithms, and object-oriented programming, I
-                specialize in building scalable backend systems and full-stack applications using Java, Spring Boot,
-                Node.js, and MongoDB.</p>
-            <p>I have successfully led and developed multiple projects, including a personal journal management platform
-                with integrated caching, weather data, and email notifications, and a contract farming app that enabled
-                real-time communication between farmers and contractors. My proficiency spans modern tools and platforms
-                like Redis, Docker, SonarQube, Firebase, and AWS, and I'm experienced in both REST API development and
-                frontend technologies like ReactJS and Flutter.</p>
-            <p>With over 450 problems solved on LeetCode, a global rating of 1483, and gold badges on HackerRank in C++,
-                Python, and SQL, I bring strong problem-solving skills and a collaborative spirit to every team I join.
-                I aim to combine technical skills with creativity to deliver impactful software solutions.</p>
-            <!-- <a href="#" class="btn">Readd More</a> -->
-        </div>
-    </section>
-    <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class="bx bx-code-alt"></i>
-                <h3>Web Development</h3>
-                <p>Design and develop responsive and dynamic websites using modern web technologies like MERN,
-                    Springboot, HTML, CSS, JavaScript, and frameworks..</p>
-                <a href="#" class="btn" data-target="web.html">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxl-android'></i>
-                <h3>Android Development</h3>
-                <p>Create user-friendly and feature-rich Android applications tailored to meet client requirements and
-                    industry standards.</p>
-                <a href="#" class="btn" data-target="android.html">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxl-microsoft'></i>
-                <h3>Software Development</h3>
-                <p>Develop robust and scalable software solutions for various platforms like windows, linux, ensuring
-                    high performance, security and
-                    reliability.</p>
-                <a href="#" class="btn" data-target="software.html">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxs-data'></i>
-                <h3>Data Scientist</h3>
-                <p>Analyze and interpret complex data to provide actionable insights and drive data-driven
-                    decision-making.</p>
-                <a href="#" class="btn" data-target="data.html">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bx-chat'></i>
-                <h3>AI/ML chatbots</h3>
-                <p>Design and implement intelligent chatbots using AI and ML to enhance customer
-                    interaction and support.</p>
-                <a href="#" class="btn" data-target="ai.html">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxs-video-recording'></i>
-                <h3>Video Editor</h3>
-                <p>Produce and edit high-quality videos with creative storytelling and professional-grade tools.</p>
-                <a href="#" class="btn" data-target="video.html">Read More</a>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-badge">
+                    <i class="bx bx-cloud"></i>
+                </div>
+                <div class="experience-header">
+                    <h3>Cloud & DevOps Intern</h3>
+                    <span class="experience-time">Jan 2024 - Jun 2024</span>
+                </div>
+                <p>Automated CI/CD workflows, introduced infrastructure-as-code, and improved release reliability across microservices.</p>
+                <div class="experience-tags">
+                    <span>AWS</span>
+                    <span>Docker</span>
+                    <span>GitHub Actions</span>
+                </div>
             </div>
 
-        </div>
-        <!-- Pop-up -->
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                <iframe id="popup-iframe" src="" frameborder="0"></iframe>
+            <div class="experience-card">
+                <div class="experience-badge">
+                    <i class="bx bx-code-alt"></i>
+                </div>
+                <div class="experience-header">
+                    <h3>Backend Engineering Lead</h3>
+                    <span class="experience-time">Aug 2023 - Dec 2023</span>
+                </div>
+                <p>Designed scalable APIs, integrated Redis caching, and built observability dashboards for performance tuning.</p>
+                <div class="experience-tags">
+                    <span>Spring Boot</span>
+                    <span>Redis</span>
+                    <span>Grafana</span>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-badge">
+                    <i class="bx bx-data"></i>
+                </div>
+                <div class="experience-header">
+                    <h3>Data Platform Builder</h3>
+                    <span class="experience-time">Feb 2023 - Jul 2023</span>
+                </div>
+                <p>Delivered analytics pipelines, optimized ETL workflows, and enabled faster reporting for product teams.</p>
+                <div class="experience-tags">
+                    <span>Python</span>
+                    <span>PostgreSQL</span>
+                    <span>Airflow</span>
+                </div>
             </div>
         </div>
     </section>
-
-
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Latest <span>Projects</span></h2>
+        <p class="experience-intro">Selected builds that showcase backend depth, clean UX, and production-ready delivery.</p>
         <div class="portfolio-container">
             <div class="portfolio-box">
                 <img src="images\Journal-App1.png" alt="image1">
@@ -223,8 +194,67 @@
         </div>
     </section>
 
-    <div class="certificate-container">
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        <p class="experience-intro">Focused offerings crafted to ship reliable software, automate ops, and unlock data-driven growth.</p>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class="bx bx-code-alt"></i>
+                <h3>Web Development</h3>
+                <p>Design and develop responsive and dynamic websites using modern web technologies like MERN,
+                    Springboot, HTML, CSS, JavaScript, and frameworks..</p>
+                <a href="#" class="btn" data-target="web.html">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-android'></i>
+                <h3>Android Development</h3>
+                <p>Create user-friendly and feature-rich Android applications tailored to meet client requirements and
+                    industry standards.</p>
+                <a href="#" class="btn" data-target="android.html">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-microsoft'></i>
+                <h3>Software Development</h3>
+                <p>Develop robust and scalable software solutions for various platforms like windows, linux, ensuring
+                    high performance, security and
+                    reliability.</p>
+                <a href="#" class="btn" data-target="software.html">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-data'></i>
+                <h3>Data Scientist</h3>
+                <p>Analyze and interpret complex data to provide actionable insights and drive data-driven
+                    decision-making.</p>
+                <a href="#" class="btn" data-target="data.html">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bx-chat'></i>
+                <h3>AI/ML chatbots</h3>
+                <p>Design and implement intelligent chatbots using AI and ML to enhance customer
+                    interaction and support.</p>
+                <a href="#" class="btn" data-target="ai.html">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-video-recording'></i>
+                <h3>Video Editor</h3>
+                <p>Produce and edit high-quality videos with creative storytelling and professional-grade tools.</p>
+                <a href="#" class="btn" data-target="video.html">Read More</a>
+            </div>
+
+        </div>
+        <!-- Pop-up -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <iframe id="popup-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="certificate-container" id="certificates">
         <h2 class="heading">Valuable <span>Certificates</span></h2>
+        <p class="experience-intro">Credentials that reflect hands-on learning in cloud, data platforms, and AI tooling.</p>
 
         <div class="certificate-wrapper">
             <div class="certificate-box mySwiper">
@@ -262,7 +292,30 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images\about.png" alt="Image">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Hi, I'm Here to help you</h3>
+            <p>I'm Manu Raj, a passionate and results-driven Computer Science undergraduate at Lovely Professional
+                University. With strong foundations in data structures, algorithms, and object-oriented programming, I
+                specialize in building scalable backend systems and full-stack applications using Java, Spring Boot,
+                Node.js, and MongoDB.</p>
+            <p>I have successfully led and developed multiple projects, including a personal journal management platform
+                with integrated caching, weather data, and email notifications, and a contract farming app that enabled
+                real-time communication between farmers and contractors. My proficiency spans modern tools and platforms
+                like Redis, Docker, SonarQube, Firebase, and AWS, and I'm experienced in both REST API development and
+                frontend technologies like ReactJS and Flutter.</p>
+            <p>With over 450 problems solved on LeetCode, a global rating of 1483, and gold badges on HackerRank in C++,
+                Python, and SQL, I bring strong problem-solving skills and a collaborative spirit to every team I join.
+                I aim to combine technical skills with creativity to deliver impactful software solutions.</p>
+            <!-- <a href="#" class="btn">Readd More</a> -->
+        </div>
+    </section>
     <!-- contact section -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
