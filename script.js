@@ -217,4 +217,54 @@ if (expPopup) {
         }
     });
 }
+
+// Sequential staged reveal for home section
+document.addEventListener('DOMContentLoaded', () => {
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const intro = document.querySelector('.home-content .intro');
+    const name = document.querySelector('.home-content h1');
+    const role = document.querySelector('.home-content .role-title');
+    const para = document.querySelector('.home-content p');
+    const pills = Array.from(document.querySelectorAll('.home-pill'));
+    const social = document.querySelector('.home-content .social-media');
+    const btn = document.querySelector('.home-content .btn');
+    const imgContainer = document.querySelector('.home .about-img');
+    const homeImg = imgContainer ? imgContainer.querySelector('img') : null;
+
+    const reveal = (el, cls) => {
+        if (!el) return;
+        el.classList.remove('staged-hidden');
+        if (cls) el.classList.add(cls);
+    };
+
+    if (prefersReduce) {
+        [intro, name, role, para, social, btn].forEach(el => el && reveal(el));
+        pills.forEach(p => { p.classList.remove('staged-hidden'); p.classList.add('play-pill'); });
+        if (imgContainer) { reveal(imgContainer); }
+        if (homeImg) { homeImg.classList.add('play-right'); }
+        return;
+    }
+
+    // Step timings (ms)
+    const step = 500;
+    // Step 0: show intro + name immediately
+    setTimeout(() => { reveal(intro, 'play-fade'); reveal(name, 'play-fade'); }, 50);
+
+    // Step 1: after 0.5s show role
+    setTimeout(() => { reveal(role, 'play-left'); }, 50 + step);
+
+    // Step 2: after another 0.5s show paragraph
+    setTimeout(() => { reveal(para, 'play-left'); }, 50 + step * 2);
+
+    // Step 3: after another 0.5s reveal pills (staggered via play-pill nth-child delays)
+    setTimeout(() => { pills.forEach(p => { p.classList.remove('staged-hidden'); p.classList.add('play-pill'); }); }, 50 + step * 3);
+
+    // Step 4: after another 0.5s show social + button
+    setTimeout(() => { reveal(social, 'play-bottom'); reveal(btn, 'play-bottom'); }, 50 + step * 4);
+    // Step 5: after buttons load, reveal image
+    setTimeout(() => {
+        if (imgContainer) imgContainer.classList.remove('staged-hidden');
+        if (homeImg) homeImg.classList.add('play-right');
+    }, 50 + step * 5);
+});
   
